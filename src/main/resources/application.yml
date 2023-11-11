@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://<your-server-name>.database.windows.net:<port>;databaseName=<your-database-name>
-    username: <your-username>
-    password: <your-password>
+    url: jdbc:sqlserver://car-services.database.windows.net:1433;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: carservice
+    password: Kolkata#1999
   jpa:
     show-sql: true
     hibernate:
