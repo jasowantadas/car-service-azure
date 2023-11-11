@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://<your-server-name>.database.windows.net:<port>;databaseName=<your-database-name>
+    username: <your-username>
+    password: <your-password>
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.SQLServer2016Dialect
+server:
+  port: 9191
