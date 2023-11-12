@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
-import java.util.List;
+import java.util.Map;
 @CrossOrigin(origins = "*", allowedHeaders = "*",methods = {RequestMethod.GET, RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT,RequestMethod.PATCH})
 @RestController
 @RequestMapping(path="api/v1/Cars")
@@ -32,7 +32,7 @@ public  ResponseEntity<?> getIntervalDiff(@PathVariable("name") String name,@Pat
     @PostMapping
     public ResponseEntity<?> insertCar(@RequestBody Cars car){
             carsService.insertCar(car);
-            return ResponseEntity.ok("Successfully Inserted");
+            return ResponseEntity.ok().body(Map.of("message", "Successfully Inserted"));
     }
     @DeleteMapping
     public ResponseEntity<?> deleteCar(@RequestParam("name") String name){
