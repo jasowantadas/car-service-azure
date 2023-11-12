@@ -35,10 +35,10 @@ public  ResponseEntity<?> getIntervalDiff(@PathVariable("name") String name,@Pat
             
             return ResponseEntity.ok().body(Map.of("message", "Successfully Inserted"));
     }
-    @DeleteMapping
+    @DeleteMapping(produces = "application/json")
     public ResponseEntity<?> deleteCar(@RequestParam("name") String name){
         carsService.deleteCar(name);
-        return ResponseEntity.ok("Successfully Deleted");
+        return ResponseEntity.ok().body(Map.of("message", "Successfully Deleted"));
 
 
     }
