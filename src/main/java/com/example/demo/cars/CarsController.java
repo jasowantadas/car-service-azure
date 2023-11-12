@@ -29,9 +29,10 @@ public  ResponseEntity<?> getIntervalDiff(@PathVariable("name") String name,@Pat
     public ResponseEntity<?> getCars(){
             return ResponseEntity.ok(carsService.getCars());
     }
-    @PostMapping
+    @PostMapping(produces = "application/json")
     public ResponseEntity<?> insertCar(@RequestBody Cars car){
             carsService.insertCar(car);
+            
             return ResponseEntity.ok().body(Map.of("message", "Successfully Inserted"));
     }
     @DeleteMapping
