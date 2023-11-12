@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*",methods = {RequestMethod.GET, RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT,RequestMethod.PATCH})
 @RestController
 @RequestMapping(path="api/v1/Cars")
 public class CarsController {
